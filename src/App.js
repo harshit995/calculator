@@ -25,6 +25,7 @@ function App() {
     JSON.parse(localStorage.getItem("calculator-app-history")) || []
   );
 
+
   const handleKeyPress = (keyCode, key) => {
     if (!keyCode) return;
     if (!usedKeyCodes.includes(keyCode)) return;
@@ -98,9 +99,8 @@ function App() {
             onClick={() => setIsDarkMode(!isDarkMode)}
           >
             <div
-              className={`app_calculator_navbar_toggle_circle ${
-                isDarkMode ? "app_calculator_navbar_toggle_circle_active" : ""
-              }`}
+              className={`app_calculator_navbar_toggle_circle ${isDarkMode ? "app_calculator_navbar_toggle_circle_active" : ""
+                }`}
             />
           </div>
           <img src={isDarkMode ? moonIcon : sunIcon} alt="mode" />
